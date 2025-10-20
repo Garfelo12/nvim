@@ -1,0 +1,13 @@
+local o = vim.opt
+o.termguicolors = true
+o.number = true
+o.relativenumber = true
+o.signcolumn = "yes"
+o.updatetime = 200
+o.timeoutlen = 400
+o.scrolloff = 6
+o.expandtab = true
+o.shiftwidth = 2
+o.tabstop = 2
+o.ignorecase = true
+o.smartcase = true

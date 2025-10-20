@@ -1,0 +1,72 @@
+return {
+  { 
+    "folke/lazy.nvim", 
+    version = "*",
+  },
+  { 
+    "lewis6991/gitsigns.nvim", 
+    tag = "v0.6", 
+    config = function()
+      require("gitsigns").setup()
+    end
+  },
+
+  {
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.8",                     
+    dependencies = 
+    {
+      "nvim-lua/plenary.nvim"
+    },
+    config = function() 
+      require("config.plugins.telescope") 
+    end,
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    tag = "v0.8.5.2",
+    build = ":TSUpdate",
+    config = function()
+      require("config.plugins.treesitter")
+    end,
+  },
+
+  {
+    "nvim-tree/nvim-tree.lua",
+    tag = "v1.3.3",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("config.plugins.tree")
+    end,
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    tag = "v1.0.0",
+    config = function()
+      require("config.plugins.lspconfig.vhdl_ls")
+      --require("config.plugins.lspconfig.dvt")
+    end,
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    commit = "5dce1b778b85c717f6614e3f4da45e9f19f54435",  -- 13 juin 2023
+    event = "InsertEnter",
+    dependencies = {
+      { "hrsh7th/cmp-nvim-lsp", commit = "44b16d11215dce86f253ce0c30949813c0a90765" }, -- 23 nov 2022
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "L3MON4D3/LuaSnip",
+    },
+    config = function()
+      require("config.plugins.cmp")
+    end,
+  },
+  {
+   "folke/trouble.nvim",
+   tag = "v2.10.0",
+   dependencies = { "nvim-tree/nvim-web-devicons" },
+   opts = {},
+  }
+}
