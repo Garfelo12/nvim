@@ -14,6 +14,16 @@ map("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
 map("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
 map("n", "gR", function() require("trouble").toggle("lsp_references") end)
 
+-- LuaSnip
+map({"i"}, "<C-K>",      function() require("luasnip").expand() end, {silent = true})
+map({"i", "s"}, "<C-L>", function() require("luasnip").jump( 1) end, {silent = true})
+map({"i", "s"}, "<C-J>", function() require("luasnip").jump(-1) end, {silent = true})
+map({"i", "s"}, "<C-E>", function()
+	if require("luasnip").choice_active() then
+		require("luasnip").change_choice(1)
+	end
+end, {silent = true})
+
 -- Telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files" })
 map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>",  { desc = "Grep text" })
