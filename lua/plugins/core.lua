@@ -45,8 +45,8 @@ return {
     "neovim/nvim-lspconfig",
     tag = "v1.0.0",
     config = function()
-      require("config.plugins.lspconfig.vhdl_ls")
-      --require("config.plugins.lspconfig.dvt")
+      --require("config.plugins.lspconfig.vhdl_ls")
+      require("config.plugins.lspconfig.dvt")
     end,
   },
   {
