@@ -29,3 +29,8 @@ map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files" })
 map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>",  { desc = "Grep text" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<CR>",    { desc = "List buffers" })
 map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>",  { desc = "Help tags" })
+
+-- Window layout
+map("n", "<C-w><C-t>", "<Cmd>VentanaTranspose<CR>")
+map("n", "<C-w><C-f>", "<Cmd>VentanaShift<CR>")
+map("n", "<C-w>f",     "<Cmd>VentanaShiftMaintainLinear<CR>")

@@ -4,6 +4,7 @@ return {
       require("onedark").setup({ style = "darker" }); require("onedark").load()
     end,
   },
+
   {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -11,11 +12,16 @@ return {
       require("config.plugins.lualine") 
     end,
   },
+
   {
     "karb94/neoscroll.nvim",
     opts = {},
     config = function() 
       require("config.plugins.neoscroll") 
     end,
+  },
+
+  { 
+    'jyscao/ventana.nvim'
   }
 }
