@@ -11,4 +11,11 @@ return {
       require("config.plugins.lualine") 
     end,
   },
+  {
+    "karb94/neoscroll.nvim",
+    opts = {},
+    config = function() 
+      require("config.plugins.neoscroll") 
+    end,
+  }
 }
