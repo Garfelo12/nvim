@@ -406,6 +406,7 @@
             "\t\t\tclk_in  : input std_logic;",
             "\t\t\tclk_out : input std_logic",
             "\t);",
+            "\tend component;",
             "",
             "--------------------------------------------------",
             "-- TYPES",
