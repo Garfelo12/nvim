@@ -23,5 +23,17 @@ return {
 
   { 
     'jyscao/ventana.nvim'
+  },
+  
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    tag = "compat/0.7",
+    dependencies =
+    {
+      "nvim-treesitter/nvim-treesitter"
+    },
+    config = function()
+      require("config.plugins.treesitter-context")
+    end
   }
 }
