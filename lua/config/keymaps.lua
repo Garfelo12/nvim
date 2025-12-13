@@ -34,3 +34,7 @@ map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>",  { desc = "Help tags" })
 map("n", "<C-w><C-t>", "<Cmd>VentanaTranspose<CR>")
 map("n", "<C-w><C-f>", "<Cmd>VentanaShift<CR>")
 map("n", "<C-w>f",     "<Cmd>VentanaShiftMaintainLinear<CR>")
+
+-- Align
+map("x", "ga", "<Plug>(EasyAlign)", { noremap = false })
+map("n", "ga", "<Plug>(EasyAlign)", { noremap = false })
