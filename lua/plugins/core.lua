@@ -45,9 +45,10 @@ return {
     "neovim/nvim-lspconfig",
     tag = "v1.0.0",
     config = function()
-      -- Select only one LSP
+      require("config.plugins.lspconfig.basedpyright")
       --require("config.plugins.lspconfig.vhdl_ls")
       require("config.plugins.lspconfig.dvt")
+      require("config.plugins.lspconfig.clangd")
     end,
   },
 
