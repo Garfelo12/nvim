@@ -10,5 +10,9 @@ return {
   
   {
     "junegunn/vim-easy-align",
+  },
+
+  {
+    "ntpeters/vim-better-whitespace",
   }
 }

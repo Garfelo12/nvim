@@ -1,11 +1,11 @@
 return {
-  { 
-    "folke/lazy.nvim", 
+  {
+    "folke/lazy.nvim",
     version = "*",
   },
-  { 
-    "lewis6991/gitsigns.nvim", 
-    tag = "v0.6", 
+  {
+    "lewis6991/gitsigns.nvim",
+    tag = "v0.6",
     config = function()
       require("gitsigns").setup()
     end
@@ -13,13 +13,13 @@ return {
 
   {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.8",                     
-    dependencies = 
+    tag = "0.1.8",
+    dependencies =
     {
       "nvim-lua/plenary.nvim"
     },
-    config = function() 
-      require("config.plugins.telescope") 
+    config = function()
+      require("config.plugins.telescope")
     end,
   },
 
@@ -56,18 +56,18 @@ return {
     commit = "5dce1b778b85c717f6614e3f4da45e9f19f54435",
     event = "InsertEnter",
     dependencies = {
-      { 
-        "hrsh7th/cmp-nvim-lsp", 
-        commit = "44b16d11215dce86f253ce0c30949813c0a90765" 
+      {
+        "hrsh7th/cmp-nvim-lsp",
+        commit = "44b16d11215dce86f253ce0c30949813c0a90765"
       },
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "saadparwaiz1/cmp_luasnip",
       {
       	"L3MON4D3/LuaSnip",
-      	version = "v2.4.1", 
+      	version = "v2.4.1",
         config = function()
-          -- For personnal snippets 
+          -- For personnal snippets
           require("luasnip.loaders.from_vscode").lazy_load({
             paths = { "./snippets" },
             --paths = { vim.fn.stdpath("config") .. "/snippets" },
