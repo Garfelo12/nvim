@@ -3,8 +3,7 @@ local map = vim.keymap.set
 map("n","<Space>","",{})
 vim.g.mapleader = " "
 
--- Nvim tree
-map("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+map("n", "<leader>e", ":Ex<CR>", { noremap = true, silent = true })
 
 -- Trouble
 map("n", "<leader>xx", function() require("trouble").toggle() end)

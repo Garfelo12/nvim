@@ -33,15 +33,6 @@ return {
   },
 
   {
-    "nvim-tree/nvim-tree.lua",
-    tag = "v1.3.3",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("config.plugins.tree")
-    end,
-  },
-
-  {
     "neovim/nvim-lspconfig",
     tag = "v1.0.0",
     config = function()
