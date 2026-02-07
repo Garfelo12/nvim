@@ -3,7 +3,20 @@ local map = vim.keymap.set
 map("n","<Space>","",{})
 vim.g.mapleader = " "
 
+map("i", "jk",        "<Esc>",   { noremap = true, silent = true })
 map("n", "<leader>e", ":Ex<CR>", { noremap = true, silent = true })
+map("n", "<leader>w", ":w<CR>",  { noremap = true, silent = true })
+map("n", "<leader>wq", ":w<CR>",  { noremap = true, silent = true })
+
+map("n", "<C-j>", "10j", { noremap = true, silent = true })
+map("n", "<C-k>", "10k", { noremap = true, silent = true })
+
+-- Training
+map("n", "<Esc>", "<Nop>", { noremap = true, silent = true })
+map({ "n", "i", "v" }, "<Up>", "<Nop>", opts)
+map({ "n", "i", "v" }, "<Down>", "<Nop>", opts)
+map({ "n", "i", "v" }, "<Left>", "<Nop>", opts)
+map({ "n", "i", "v" }, "<Right>", "<Nop>", opts)
 
 -- Trouble
 map("n", "<leader>xx", function() require("trouble").toggle() end)
@@ -11,7 +24,6 @@ map("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnosti
 map("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
 map("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
 map("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
-map("n", "gR", function() require("trouble").toggle("lsp_references") end)
 
 -- LuaSnip
 map({"i"}, "<C-K>",      function() require("luasnip").expand() end, {silent = true})
@@ -24,10 +36,10 @@ map({"i", "s"}, "<C-E>", function()
 end, {silent = true})
 
 -- Telescope
-map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files" })
-map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>",  { desc = "Grep text" })
-map("n", "<leader>fb", "<cmd>Telescope buffers<CR>",    { desc = "List buffers" })
-map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>",  { desc = "Help tags" })
+map("n", "<leader>ff", "<cmd>Telescope find_files<CR>",      { desc = "Find files" })
+map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>",       { desc = "Grep text" })
+map("n", "<leader>fb", "<cmd>Telescope buffers<CR>",         { desc = "List buffers" })
+map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>",       { desc = "Help tags" })
 
 -- Window layout
 map("n", "<C-w><C-t>", "<Cmd>VentanaTranspose<CR>")
