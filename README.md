@@ -1,4 +1,4 @@
-# NVIM VHDL IDE
+# NVIM VHDL
 ## Main features
 - Completion
 - LSP diagnostic
