@@ -76,5 +76,13 @@ return {
    tag = "v2.10.0",
    dependencies = { "nvim-tree/nvim-web-devicons" },
    opts = {},
-  }
+  },
+
+  {
+    "rmagatti/goto-preview",
+    tag = "v1.1.0",
+    config = function()
+      require("config.plugins.goto")
+    end,
+  },
 }
