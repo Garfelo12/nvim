@@ -3,10 +3,15 @@ local map = vim.keymap.set
 map("n","<Space>","",{})
 vim.g.mapleader = " "
 
-map("i", "jk",        "<Esc>",   { noremap = true, silent = true })
-map("n", "<leader>e", ":Ex<CR>", { noremap = true, silent = true })
-map("n", "<leader>w", ":w<CR>",  { noremap = true, silent = true })
-map("n", "<leader>wq", ":w<CR>",  { noremap = true, silent = true })
+map("i", "jk",          "<Esc>",    { noremap = true, silent = true })
+map("x", "jk",          "<Esc>",    { noremap = true, silent = true })
+map("n", "<leader>e",   ":Ex<CR>",  { noremap = true, silent = true })
+map("n", "<leader>w",   ":w<CR>",   { noremap = true, silent = true })
+map("n", "<leader>wq",  ":wq<CR>",  { noremap = true, silent = true })
+map("n", "<leader>wqa", ":wqa<CR>", { noremap = true, silent = true })
+map("n", "<leader>q",   ":q<CR>",   { noremap = true, silent = true })
+map("n", "<leader>qq",  ":q!<CR>",  { noremap = true, silent = true })
+map("n", "<leader>qqa", ":qa!<CR>", { noremap = true, silent = true })
 
 map("n", "<C-j>", "10j", { noremap = true, silent = true })
 map("n", "<C-k>", "10k", { noremap = true, silent = true })
