@@ -14,7 +14,11 @@ map("n", "<leader>qq",  ":q!<CR>",  { noremap = true, silent = true })
 map("n", "<leader>qqa", ":qa!<CR>", { noremap = true, silent = true })
 
 map("n", "<C-j>", "10j", { noremap = true, silent = true })
-map("n", "<C-k>", "10k", { noremap = true, silent = true })
+map("n", "<C-j>", "10j", { noremap = true, silent = true })
+map("v", "<C-j>", "10j", { noremap = true, silent = true })
+map("v", "<C-k>", "10k", { noremap = true, silent = true })
+map("x", "<C-k>", "10k", { noremap = true, silent = true })
+map("x", "<C-k>", "10k", { noremap = true, silent = true })
 
 -- Training
 map("n", "<Esc>", "<Nop>", { noremap = true, silent = true })
